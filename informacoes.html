@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Informações - FIX YOU BODY</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Open Sans', sans-serif;
+      background-color: #f1f1f1;
+      color: #333;
+      margin-top: 40px;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 10;
+    }
+
+    header h1 {
+      font-family: 'Bebas Neue', cursive;
+      font-size: 32px;
+      color: #b19a4f;
+      letter-spacing: 2px;
+    }
+
+    nav {
+      position: relative;
+    }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            gap: 5px;
+        }
+
+.menu-toggle span {
+    width: 25px; 
+    height: 3px;
+    background: #b19a4f;
+    border-radius: 2px;
+}
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 16px;
+      border: 2px solid transparent;
+      border-radius: 20px;
+      transition: 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      border-color: #b19a4f;
+      background-color: #b19a4f;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: flex;
+        right: 10px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+        background-color: rgba(0,0,0,0.9);
+        padding: 15px;
+        border-radius: 10px;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        display: none;
+		width: 200px;
+      }
+
+      nav ul.active {
+        display: flex;
+      }
+    }
+
+    h2 {
+      text-align: center;
+      font-family: 'Bebas Neue', cursive;
+      font-size: 40px;
+      color: #b19a4f;
+      margin-top: 120px;
+    }
+
+    .content {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      width: 90%;
+      max-width: 800px;
+      margin: 0 auto;
+      margin-top: 40px;
+    }
+
+    .maps iframe {
+      border: 0;
+    }
+
+    h3, h4 {
+      font-family: 'Bebas Neue', cursive;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #000;
+      font-size: 14px;
+      color: #888;
+      margin-top: 40px;
+    }
+
+    .no-style-link {
+      color: inherit;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .no-style-link:hover,
+    .no-style-link:visited,
+    .no-style-link:active {
+      color: inherit;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Cabeçalho fixo -->
+<header id="header">
+  <h1><a href="index.html" class="no-style-link">FIX YOU BODY</a></h1>
+  <nav>
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+                <ul id="menu">
+                    <li><a href="informacoes.html">Informações</a></li>
+                    <li><a href="transformacoes.html">Transformações</a></li>
+					<li><a href="indexarea.htm">Log In</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+  <!-- Título da página -->
+  <h2>Mais Informações</h2>
+
+  <!-- Conteúdo da página -->
+<div class="content">
+  <div class="maps" style="display: flex; justify-content: center; margin-bottom: 20px;">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2985.8130375965293!2d-8.5822236234277!3d41.55164518578961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd245317e31d80db%3A0xd9db9db1cebdbbd6!2sFIX%20YOU%20BODY%20Private%20Studio!5e0!3m2!1spt-PT!2spt!4v1744372197890!5m2!1spt-PT!2spt" 
+      width="100%" 
+      height="260" 
+      style="border:0; max-width: 340px; border-radius: 10px;" 
+      allowfullscreen="root" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+<center>
+  <h3>🕐 Horário de Funcionamento</h3>
+  <h4>Segunda a Sexta: 08h00 – 20h00</h4>
+  <h4>Sábado: 09h00 – 14h00</h4>
+  <h4>Domingo: Fechado</h4>
+
+  <br>
+
+  <h4><strong>📞 Telefone:</strong> +351 914 836 511</h4>
+  <h4><strong>📧 Email:</strong> contato@fixyoubody.pt</h4>
+
+  <br>
+	
+  <h3>💬 O que dizem nossos clientes</h3>
+  <h4>"O melhor estúdio! Ambiente calmo e atendimento excelente." – Joana Silva</h4>
+  <h4>"Profissionais incríveis, resultados reais!" – Pedro Carvalho</h4>
+	</center>
+  <br>
+
+  <div style="margin-top: 40px; text-align: center;">
+    <a href="indexcomocontactar.html" style="background-color: #acacac; color: #000000; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-family: 'Open Sans', sans-serif;">
+      📧 Peça-nos mais informações
+    </a>
+  </div>
+</div>
+
+
+  <!-- Rodapé -->
+  <footer>
+    &copy; 2025 FIX YOU BODY. Todos os direitos reservados.
+  </footer>
+<script>
+  const toggleButton = document.getElementById('menu-toggle');
+  const menu = document.getElementById('menu');
+
+  toggleButton.addEventListener('click', () => {
+    menu.classList.toggle('active');
+  });
+</script>
+
+</body>
+</html>
+
+

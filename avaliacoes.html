@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gestão de Avaliações | FIX YOU BODY</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body, html {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #f1f1f1;
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 10;
+      height: 80px;
+    }
+
+    header h1 {
+      font-family: 'Bebas Neue', cursive;
+      font-size: 32px;
+      color: #b19a4f;
+      letter-spacing: 2px;
+    }
+
+    .no-style-link {
+      color: inherit;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    /* Menu Hamburguer */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      width: 30px;
+      height: 21px;
+      justify-content: space-between;
+      background: transparent;
+      border: none;
+      z-index: 20;
+      position: absolute;
+      right: 20px;
+      top: 25px;
+      padding: 0;
+    }
+
+    .hamburger div {
+      background-color: #b19a4f;
+      width: 100%;
+      height: 3px;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+
+    .hamburger.active div:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active div:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active div:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* Menu de Navegação */
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 16px;
+      border: 2px solid transparent;
+      border-radius: 20px;
+      transition: 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      border-color: #b19a4f;
+      background-color: #b19a4f;
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        position: fixed;
+        top: 80px;
+        right: 0;
+        background: rgba(0, 0, 0, 0.95);
+        width: 220px;
+        height: 100%;
+        padding-top: 20px;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        gap: 10px;
+      }
+
+      nav ul.show {
+        transform: translateX(0);
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+
+    /* Conteúdo Principal */
+    .container {
+      max-width: 350px;
+      margin: 120px auto 60px;
+      background: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    h2 {
+      font-family: 'Bebas Neue', cursive;
+      font-size: 36px;
+      color: #b19a4f;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 30px;
+    }
+
+    .btn-custom {
+      display: inline-block;
+      margin: 0 20px 20px 20px;
+      padding: 12px 24px;
+      background-color: #b19a4f;
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-custom:hover {
+      background-color: #8a763d;
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 20px;
+      background-color: #000;
+      font-size: 14px;
+      color: #888;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1><a href="pagina_principal_adm.php" class="no-style-link">FIX YOU BODY</a></h1>
+  
+  <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+    <div></div>
+    <div></div>
+    <div></div>
+  </button>
+
+  <nav>
+    <ul id="menu-principal">
+            <li><a href="admin_chat.php">Chats</a></li>
+            <li><a href="inserir_utilizadores_frm.htm">Adicionar utilizadores</a></li>
+            <li><a href="remover_utilizadores_listados.php">Listagem utilizadores</a></li>
+            <li><a href="marcacoes_frm.php">Adicionar Marcações</a></li>
+            <li><a href="remover_marcacoes_listadas.php">Listagem Marcações</a></li>
+            <li><a href="marcacoes_calendario_adm.php">Calendário Marcações</a></li>
+            <li><a href="avaliacoes.php">Avaliações</a></li>
+            <li><a href="logout.php">Logout</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="container">
+  <h2>Gestão de Avaliações</h2>
+  <p>Escolha uma opção abaixo:</p>
+  <a href="avaliacoes_admin.php" class="btn-custom">Inserir Avaliações</a>
+  <a href="ver_avaliacoes_admin.php" class="btn-custom">Ver Avaliações</a>
+</div>
+
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const menu = document.getElementById('menu-principal');
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    menu.classList.toggle('show');
+    const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+    hamburger.setAttribute('aria-expanded', !expanded);
+  });
+
+  hamburger.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      hamburger.click();
+    }
+  });
+</script>
+
+</body>
+</html>

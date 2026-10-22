@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>FIX YOU BODY</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f1f1f1;
+            color: #333;
+            margin-top: 20px;
+        }
+
+        /* Cabe�alho fixo */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 10;
+        }
+
+        header h1 {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 32px;
+            color: #b19a4f;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            position: relative;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 16px;
+            border: 2px solid transparent;
+            border-radius: 20px;
+            transition: 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            border-color: #b19a4f;
+            background-color: #b19a4f;
+        }
+
+        /* Dropdown menu button for mobile */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            gap: 5px;
+        }
+
+.menu-toggle span {
+    width: 25px; 
+    height: 3px;
+    background: #b19a4f;
+    border-radius: 2px;
+}
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: flex;
+                right: 10px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+                background-color: rgba(0,0,0,0.9);
+                padding: 15px;
+                border-radius: 10px;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                display: none;
+                width: 200px;
+                z-index: 20;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+        }
+
+        /* T�tulo */
+        h2 {
+            text-align: center;
+            font-family: 'Bebas Neue', cursive;
+            font-size: 35px;
+            color: #b19a4f;
+            margin-top: 120px;
+			 margin-bottom: 10px;
+        }
+		
+
+        /* Container para as transforma��es */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        /* Estilo de cada transforma��o */
+        .transformacao {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        /* Estilo para a imagem e o texto */
+        .thumbanail {
+            width: 48%;
+        }
+
+        .thumbanail img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .text {
+            width: 48%;
+        }
+
+        h6 {
+            font-size: 18px;
+            color: #555;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        h4 {
+            font-size: 18px;
+            color: #444;
+            line-height: 1.8;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        /* Linha decorativa */
+        .line-separator {
+            border: none;
+            height: 2px;
+            background: linear-gradient(to right, #b19a4f, #d4b960, #b19a4f);
+            margin: 40px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #000;
+            font-size: 14px;
+            color: #888;
+            margin-top: 40px;
+        }
+
+        .no-style-link {
+            color: inherit;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .no-style-link:hover,
+        .no-style-link:visited,
+        .no-style-link:active {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* Ajustes para mobile das transforma��es */
+        @media (max-width: 768px) {
+            .transformacao {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .thumbanail {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .text {
+                width: 100%;
+            }
+
+            h3 {
+                font-size: 20px;
+            }
+
+            h4 {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <h1><a href="index.html" class="no-style-link">FIX YOU BODY</a></h1>
+            <nav>
+                <div class="menu-toggle" id="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul id="menu">
+                    <li><a href="informacoes.html">Informações</a></li>
+                    <li><a href="transformacao.html">Transformações</a></li>
+					<li><a href="indexarea.htm">Log In</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <div id="main">
+            <center>
+                <h2>Transformações</h2>
+            </center>
+
+            <div class="container">
+                <!-- Primeira Transforma��o: Imagem � esquerda e texto � direita -->
+                <div class="transformacao">
+                    <div class="thumbanail">
+                        <img src="transformacao1.png" width="500" height="600"/>
+                    </div>
+                    <div class="text">
+                        <h6>Transformação da Carolina✨</h6>
+                        <u><h3>"Muito Mais Do Que Perder Peso, Foi Ganhar Vida"</h3></u>
+                        <h4>Em apenas seis meses, a Carolina não perdeu apenas 10 kg — transformou por completo a sua maneira de viver. O que começou como um objetivo físico tornou-se numa revolução interior: mais saúde, mais confiança e uma clareza renovada sobre o que realmente importa na vida. Esta não foi uma mudança superficial. Foi um processo de reinvenção pessoal, onde a disciplina e a consistência se tornaram aliadas, e um plano adaptado às suas necessidades fez toda a diferença. A Carolina não só emagreceu — ela redefiniu a sua relação com o corpo, com os hábitos e até com a sua presença no mundo.</h4>
+                    </div>
+                </div>
+
+                <!-- Linha decorativa -->
+                <hr class="line-separator">
+
+                <!-- Segunda Transforma��o: Texto acima da imagem -->
+                <div class="transformacao">
+                    <div class="text">
+                        <h6>Transformação da Elisabete✨</h6>
+                        <u><h3>"Sinto-me melhor comigo mesma"</h3></u>
+                        <h4>Mais uma transformação para inspirar-vos! A Elisabete, que decidiu investir em si mesma e mostrar do que é capaz. Com foco, dedicação e confiança no processo, ela transformou não só o corpo, mas também a autoestima e a qualidade de vida. Resultado de treinos consistentes, alimentação equilibrada e, claro, muito esforço! 💪 🚀</h4>
+                    </div>
+                    <div class="thumbanail">
+                        <img src="transformacao3.png" alt="root" />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+      <!-- Rodap� -->
+      <footer>
+        &copy; 2025 FIX YOU BODY. Todos os direitos reservados.
+      </footer>
+
+    <!-- Scripts -->
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu');
+
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('show');
+        });
+    </script>
+
+</body>
+</html>

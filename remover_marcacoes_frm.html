@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt">
+<link rel="stylesheet" href="assets/css/main.css" />
+<head>
+  <meta charset="UTF-8">
+  <title>Marcaçãos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+    }
+    form {
+      max-width: 400px;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input, select, button {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      background-color: #6c5a5a00;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #5f5f5f;
+    }
+  </style>
+</head>
+<body>
+  		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="pagina_principal_adm.php">FIX YOU BODY</a></h1>
+    <nav>
+        <ul>
+            <li><a href="admin_chat.php">Chats</a></li>
+            <li><a href="inserir_utilizadores_frm.htm">Adicionar utilizadores</a></li>
+            <li><a href="remover_utilizadores_listados.php">Listagem utilizadores</a></li>
+            <li><a href="marcacoes.frm.html">Adicionar Marcações</a></li>
+            <li><a href="remover_marcacoes_listadas.php">Listagem Marcações</a></li>
+            <li><a href="marcacoes_calendario_adm.php">Calendário Marcações</a></li>
+            <li><a href="avaliacoes.php">Avaliações</a></li>
+            <li><a href="logout.php">Logout</a></li>
+        </ul>
+    </nav>
+						<nav class="main">
+							<ul>
+								<li class="menu">
+									<a class="fa-bars" href="#menu">Menu</a>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<section id="menu">
+
+
+						<!-- Actions -->
+							<section>
+								<ul class="actions stacked">
+									<li><a href="logout.php">Logout</a></li>
+								</ul>
+							</section>
+
+					</section>
+
+				<div id="main">
+
+   
+  <h1 style="text-align: center;">Marcações</h1>
+  <tr>
+
+  <form action="remover_marcacoes.php" method="post">
+	<table border="1">
+		
+        
+     </tr>
+     <td>ID Marcação</td>
+     <td><input type="text" name="id_marc"></td>	        
+     
+  <button type="submit" name="remover">Remover</button>
+  </form>
+  
+</body>
+
+</html>
